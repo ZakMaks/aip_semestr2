@@ -1,6 +1,11 @@
 #include <iostream>
-
+#include <fstream>
+#include <string>
 //zuducha 5
+//Пользователь вводит три числа. Увеличьте первое число в два раза, второе число
+//уменьшите на 3, третье число возведите в квадрат и затем найдите сумму новых
+//трех чисел.
+
 int main()
 {
     int a, b, c, S;
@@ -18,6 +23,12 @@ int main()
 
     std::getchar();
     std::getchar();
+
+    std::fstream f("Otvet.txt", std::ios::out); // открываем для записи
+    f << "Poluchilos' tak: " << S;
+     f.close(); // закрываем файл
+
+
     return 0;
 }
 
