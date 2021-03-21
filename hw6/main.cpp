@@ -1,6 +1,8 @@
 #include <iostream>
-
+#include <fstream>
+#include <string>
 //zuducha 11
+//Вводятся три целых числа. Наибольшее увеличить на 5, наименьшее уменьшить 3.
 
 int main()
 {
@@ -42,11 +44,16 @@ int main()
 
     max = max +5;
     min = min -3;
-     std::cout << "Vashi chisla: "<< min <<" "<< sr <<" "<< max;
+     std::cout << "Vashi chisla: "<< min <<"  "<< sr <<"  "<< max;
 
 
     std::getchar();
     std::getchar();
+
+    std::fstream f("Otvet.txt", std::ios::out); // открываем для записи
+     f  << "Vashi chisla: "<< min <<"  "<< sr <<"  "<< max;
+     f.close(); // закрываем файл
+
     return 0;
 }
 
