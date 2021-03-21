@@ -1,4 +1,7 @@
 #include <iostream>
+#include <fstream>
+#include <string>
+//Вывести на экран Первую букву имени из символов "*" (звездочка)
 
 int main()
 {
@@ -14,6 +17,10 @@ int main()
 
    std::getchar();
    std::getchar();
-
    return 0;
 }
+
+
+
+
+
